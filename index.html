@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+<body onload = "getAllCountries()" >
+    <section id="section1" >
+        <h1>Country info</h1> 
+
+        <ul id="country-info">
+
+        </ul>
+        <form action = "" id = "country_form">
+            <input type = "text" id = "countryNameInput" placeholder="type in a Country">
+            <input type = "submit" id = "AddCountry">
+        </form>
+    </section>
+
+    <section>
+        <h1>Filter country</h1>
+
+        <form action = "" id = "country-filter">
+
+            <input type = "text" id = "countryNameInputFilter" placeholder="Filter 'all countries' list">
+            <input type = "submit" id = "filterList">
+
+        </form>
+
+
+    </section>
+
+    <h1>All country</h1>
+    <section id="section2">
+        <ul id="AllCountriesUl">
+
+
+        </ul>
+    </section>
+</body>
+</html>
