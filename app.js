@@ -42,21 +42,23 @@ function getCountryByName(countryName){
     })
 }
 
-
 function getAllCountries(){
     const fetchPromise = fetch(`https://restcountries.com/v2/all`);
 
     fetchPromise.then(response => response.json()).then(countryAll => {
 
 
-        const list = countryAll.map(country => `Country name: ${country.name}, Population: ${country.population} \n`);
+        const list = countryAll.map(country => `Country name: ${country.name}, Population: ${country.population}`);
 
         console.log(list);
         
         const unorderedList = document.querySelector("#AllCountriesUl")
-        const newAllCountryList = document.createElement("li");
-        newAllCountryList.innerText = list;
-        unorderedList.appendChild(newAllCountryList);
+        list.forEach(country => {
+            const newAllCountryList = document.createElement("li");
+            newAllCountryList.innerText = country;
+            unorderedList.appendChild(newAllCountryList);
+        })
+        
         
 
     })
